@@ -1,6 +1,6 @@
 {
     "name": "wufeng/tim",
-    "description": "this is a tencent tim plugin",
+    "description": "腾讯即时通信封装",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -12,8 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.6",
-        "guzzlehttp/guzzle": ">=6.5.2",
-        "divineomega/do-file-cache":"2.0.6"
+        "guzzlehttp/guzzle": ">=6.5.2"
     },
     "autoload": {
         "psr-4": {
