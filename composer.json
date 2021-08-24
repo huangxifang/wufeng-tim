@@ -1,0 +1,23 @@
+{
+    "name": "wufeng/tim",
+    "description": "this is a tencent tim plugin",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wufeng",
+            "email": "2906568991@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6",
+        "guzzlehttp/guzzle": ">=6.5.2",
+        "divineomega/do-file-cache":"2.0.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "wufeng\\tim\\": "/src"
+        }
+    }
+}
