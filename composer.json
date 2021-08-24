@@ -9,7 +9,7 @@
             "email": "2906568991@qq.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "1.0.0",
     "require": {
         "php": ">=5.6",
         "guzzlehttp/guzzle": ">=6.5.2",
