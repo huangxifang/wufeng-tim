@@ -5,7 +5,7 @@
  * @date 2021/7/2
  */
 
-namespace wufeng\time\Tim;
+namespace wufeng\tim\Tim;
 
 
 use wufeng\tim\BaseTim;
