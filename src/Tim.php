@@ -100,10 +100,8 @@ class Tim
     {
         //自动缓存
         $expire_time = 86400;
-
         $sign = new Sign($this->appid, $this->key);
         $_sign = $sign->genUserSig($this->userid, $expire_time);
-
         $this->sign = $_sign;
         // 是否进行缓存处理
         // $cacheKey = 'tim_sign_' . $this->userid;
