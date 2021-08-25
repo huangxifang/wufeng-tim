@@ -42,20 +42,6 @@ class Tim
         $this->appid = $config['appid'];
         $this->key = $config['key'];
         $this->userid = $_userid;
-
-        //自动缓存
-        $expire_time = 86400 * 180;
-        $ext_time = time() + $expire_time;
-
-        $sign = new Sign($this->appid, $this->key);
-        $cache = new \DivineOmega\DOFileCache\DOFileCache();
-        $cache->changeConfig(["cacheDirectory" => isset($config['cache_dir']) ? $config['cache_dir'] : './temp/Sign/']);
-        $_sign = $cache->get('tim_sign_' . $this->userid);
-        if (!$_sign) {
-            $_sign = $sign->genUserSig($this->userid, $expire_time);
-            $cache->set('tim_sign_' . $this->userid, $_sign, $ext_time);
-        }
-        $this->sign = $_sign;
     }
 
     public function getAppID()
