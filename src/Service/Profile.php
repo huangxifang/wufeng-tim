@@ -16,13 +16,13 @@ class Profile extends BaseTim
     /**
      * 更新学员头像和昵称
      * @param $userId
-     * @param array $data
+     * @param array $data 昵称nickname 头像avatar 性别sex
      * @return bool|mixed
      * @author wufeng
      * @date 2021/7/19
      */
-    static public function updateIMProfile($userId,$data = []){
-        $account = new Account(new Tim());
+    static public function updateIMProfile(Tim $tim,$userId,$data = []){
+        $account = new Account($tim);
         $profile = [];
         if (isset($data['nickname'])){
             array_push($profile,[
@@ -64,9 +64,9 @@ class Profile extends BaseTim
      * @author wufeng
      * @date 2021/7/20
      */
-    public static function importSingleAccountIM($userId,$nickname,$avatar)
+    public static function importSingleAccountIM(Tim $tim,$userId,$nickname,$avatar)
     {
-        $account = new Account(new Tim());
+        $account = new Account($tim);
         return $account->importSingleAccount($userId,$nickname,$avatar);
     }
 }
